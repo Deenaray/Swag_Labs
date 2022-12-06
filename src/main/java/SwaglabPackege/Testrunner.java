@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
             features = {"src/test/java/featureFile"},
             glue = {"SwaglabPackege.stepdef"},
             tags = "",
-            plugin = {"pretty",
+            plugin = {"pretty","json:target/cucumber-report/report.json",
+                    "html:target/cucumber-report/report.html",
                     "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"})
 public class Testrunner {
 
