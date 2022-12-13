@@ -2,6 +2,7 @@ package SwaglabPackege;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.After;
 import org.junit.runner.RunWith;
 
     @RunWith(Cucumber.class)
@@ -13,5 +14,8 @@ import org.junit.runner.RunWith;
                     "html:target/cucumber-report/report.html",
                     "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"})
 public class Testrunner {
+@After
+        public void screenShot()
+{
 
-}
+}}

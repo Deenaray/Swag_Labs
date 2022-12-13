@@ -5,7 +5,7 @@ Feature: Swaglab shopping site
     Then login to the website
     Examples:
       | username | password|
-    |   standard_user       | secret_sauce  |
+    |   standard_user       | ecret_sauce  |
 
 
   @Smoke

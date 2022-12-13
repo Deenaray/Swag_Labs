@@ -1,8 +1,17 @@
 package SwaglabPackege.stepdef;
 
 import SwaglabPackege.SwaglabClass;
+import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.qameta.allure.Allure;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+import java.io.ByteArrayInputStream;
+
+import static SwaglabPackege.SwaglabClass.driver;
 
 public class swagstepdefs {
     SwaglabClass swaglabClass=new SwaglabClass();
@@ -51,6 +60,13 @@ public class swagstepdefs {
         swaglabClass.clickLogout();
     }
 
-
+@After
+    public void screenShot(Scenario screen)
+{
+    if (screen.isFailed()){
+        byte[] screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+        Allure.addAttachment("Failed testcase",new ByteArrayInputStream(screenshot));
+    }
+}
 
 }

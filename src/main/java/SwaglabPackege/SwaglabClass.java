@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SwaglabClass {
-    static WebDriver driver;
+   public static WebDriver driver;
 
     public void openUrl()  {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\DEENARAY\\Downloads\\chromedriver_win32 (3)\\chromedriver.exe");
