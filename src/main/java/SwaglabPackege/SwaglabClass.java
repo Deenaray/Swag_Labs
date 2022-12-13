@@ -13,10 +13,10 @@ public class SwaglabClass {
         driver.manage().window().maximize();
         driver.get("https://www.saucedemo.com/");
     }
-    public void loginpage()
+    public void loginpage(String un,String pwd)
     {
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+        driver.findElement(By.id("user-name")).sendKeys(un);
+        driver.findElement(By.id("password")).sendKeys(pwd);
     }
     public void clickLogin()
     {

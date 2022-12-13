@@ -6,10 +6,12 @@ import io.cucumber.java.en.Then;
 
 public class swagstepdefs {
     SwaglabClass swaglabClass=new SwaglabClass();
-    @Given("Username and Password")
-    public void usernameAndPassword()  {
+    @Given("Username {string} and Password {string}")
+    public void usernameAndPassword(String un, String pwd) {
+
+
         swaglabClass.openUrl();
-        swaglabClass.loginpage();
+        swaglabClass.loginpage(un,pwd);
     }
 
     @Then("login to the website")
@@ -48,4 +50,7 @@ public class swagstepdefs {
     public void clickLogout() {
         swaglabClass.clickLogout();
     }
+
+
+
 }
